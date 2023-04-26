@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table( name = "estado")
+@Table( name = "Estado")
 @Getter
 @Setter
 @ToString
@@ -15,17 +15,10 @@ public class Estado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String nombreEstado;
+
     @ManyToOne
-    @JoinColumn(name = "pais_id")
+    @JoinColumn(name = "id_pais")
     private Pais pais;
-
-    public Pais getPais() {
-        return pais;
-    }
-
-    public void setPais(Pais pais) {
-        this.pais = pais;
-    }
 }

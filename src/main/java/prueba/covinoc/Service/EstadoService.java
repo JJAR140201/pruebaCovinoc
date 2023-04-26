@@ -50,6 +50,12 @@ public class EstadoService implements EstadoRepository{
         // TODO Auto-generated method stub
         return null;
     }
+
+    @Override
+    public Optional<Estado> findById(Long aLong) {
+        return Optional.empty();
+    }
+
     @Override
     public void flush() {
         // TODO Auto-generated method stub
@@ -119,11 +125,6 @@ public class EstadoService implements EstadoRepository{
     }
     @Override
     public <S extends Estado> S save(S entity) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-    @Override
-    public Optional<Estado> findById(Long id) {
         // TODO Auto-generated method stub
         return null;
     }

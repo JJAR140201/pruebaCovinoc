@@ -15,14 +15,14 @@ public class Persona {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int Id;
+    private Long Id;
     private String nombre;
     private String apellido;
     private int edad;
 
 
     @ManyToOne
-    @JoinColumn(name = "pais_id")
+    @JoinColumn(name = "id_pais")
     private Pais pais;
 
     public Pais getPais() {
@@ -34,7 +34,7 @@ public class Persona {
     }
 
     @ManyToOne
-    @JoinColumn(name = "estado_id")
+    @JoinColumn(name = "id_estado")
     private Estado estado;
 
     public Estado getEstado() {
